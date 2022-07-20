@@ -25,7 +25,12 @@ function App() {
   let currentImage = images.find(photos => photos.id === currentId);
 
 const handleNext = () => {
-  
+  if(currentId < images.length){
+
+    setCurrentId(currentId + 1)
+  }else{
+    setCurrentId(1)
+  }
 }
  
   return (
