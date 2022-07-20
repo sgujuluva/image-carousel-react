@@ -19,26 +19,31 @@ const images = [
   { original: photo6, id: 6 },
 ];
 function App() {
- 
   const [currentId, setCurrentId] = useState(1);
 
-  let currentImage = images.find(photos => photos.id === currentId);
+  let currentImage = images.find((photos) => photos.id === currentId);
 
-const handleNext = () => {
-  if(currentId < images.length){
+  const handleNext = () => {
+    if (currentId < images.length) {
+      setCurrentId(currentId + 1);
+    } else {
+      setCurrentId(1);
+    }
+  };
 
-    setCurrentId(currentId + 1)
-  }else{
-    setCurrentId(1)
+  const handlePrevious = () => {
+    if (currentId >1){
+      setCurrentId(currentId - 1);
+    }else{
+      setCurrentId(5);
+    }
   }
-}
- 
   return (
     <div className="App">
       <h1>Image Carousel</h1>
-      {<img width ="500" height="500" src = {currentImage.original}  alt = ""/>}
-      <button  onClick={handleNext} >Next</button>
-      <button /* onClick={handlePrevious} */>Previous</button>
+      {<img width="500" height="500" src={currentImage.original} alt="" />}
+      <button onClick={handleNext}>Next</button>
+      <button onClick={handlePrevious}>Previous</button>
     </div>
   );
 }
