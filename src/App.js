@@ -41,11 +41,15 @@ function App() {
   }
   return (
     <div className="App">
-      <div class="container">
+      
       <h1>Image Carousel</h1>
-      {<img width="500" height="500" src={currentImage.original} alt="" />}
+      <div className="container">
+      {<img width="500" height="550" src={currentImage.original} alt="" />}
+      <div className="buttons">
       <button onClick={handleNext}>Next</button>
       <button onClick={handlePrevious}>Previous</button>
+      </div>
+      
       </div>
       
     </div>
