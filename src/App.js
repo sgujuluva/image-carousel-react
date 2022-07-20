@@ -7,6 +7,10 @@ import photo5 from "./images/photo5.png";
 import photo6 from "./images/photo6.png";
 //lib
 import { useState } from "react";
+//react icons
+import {AiOutlineRight} from "react-icons/ai";
+import {AiOutlineLeft} from "react-icons/ai";
+
 //styles
 import "./App.css";
 //intialisation images
@@ -44,11 +48,12 @@ function App() {
       
       <h1>Image Carousel</h1>
       <div className="container">
-      {<img width="500" height="550" src={currentImage.original} alt="" />}
-      <div className="buttons">
-      <button onClick={handleNext}>Next</button>
-      <button onClick={handlePrevious}>Previous</button>
-      </div>
+      <img width="500" height="550" src={currentImage.original} alt="" />
+      {/* <div className="buttons"> */}
+      <button className="next-button" onClick={handleNext}><AiOutlineRight/> </button>
+      <button className="previous-button" onClick={handlePrevious}><AiOutlineLeft/></button>
+
+      {/* </div> */}
       
       </div>
       

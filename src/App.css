@@ -5,35 +5,38 @@
  align-items: center;
 }
 .container{
- 
+ position: relative;
   display:flex;
   flex-direction: column;
   justify-content: space-between;
  align-items: center;
-  width : 50vw;
-  height : 80vh;
 }
+
 h1{
   color : blue;
 }
 img{
   border : 5px solid grey;
 }
-.buttons{
-  width:30%;
-  display:flex;
-  justify-content: space-between;
- align-items: center;
- margin-right: 4rem;
-}
-.buttons :nth-of-type(1), :nth-of-type(2){
+.next-button{
+  position: absolute;
+  top:45%;
+  right:18px;
   background-color: blue;
-  width : 7rem;
-  height:2rem;
+  width : 3rem;
+  height:10%;
   font-size: larger;
   border : none;
   color :white;
 }
-.buttons :nth-of-type(2){
+.previous-button{
+  position: absolute;
+  top :45%;
+  left:18px;
   background-color: grey;
+  width : 3rem;
+  height:10%;
+  font-size: larger;
+  border : none;
+  color :white;
 }
